@@ -50,7 +50,7 @@ func jsonResponse(w http.ResponseWriter, data interface{}) {
 
 func profileHandler(w http.ResponseWriter, r *http.Request) {
 	profile := Profile{
-		Image:    "",
+		Image:    "https://avatars.githubusercontent.com/u/186155705?s=400&u=525948f23f9d5551f5f8b685a652cfc456f53899&v=4",
 		Name:     "Nuttapat Tanatummathat",
 		Title:    "FULL-STACK DEVELOPER",
 		Bio:      "Enterprise Full-Stack Developer with 3+ years of hands-on experience designing and delivering mission-critical systems across industrial,laboratory, and gaming infrastructure domains. Proven expertise integrating IoT hardware (RFID, LPR, IP Cameras) with enterprise-grade web solutions. Consistently ensures 100% data integrity in high-stakes production environments while optimizing backend performance and automating complex workflows.",
