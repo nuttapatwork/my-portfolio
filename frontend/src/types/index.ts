@@ -29,6 +29,6 @@ export interface Project {
   tech: string[];
   url?: string;
   github?: string;
-  image?: string;
+  images?: string[];
 }
 

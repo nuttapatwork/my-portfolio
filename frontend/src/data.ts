@@ -15,9 +15,9 @@ export const profile: Profile = {
     github: "https://github.com/nuttapatwork",
     location: "Pathumthani, Thailand",
     skills: [`Frontend : React, Vue, Css, Angular, Laravel, Bootstrap`,
-			`Backend : TypeScript, Node.js, C#.Net, VB.Net, C, C++, JavaScript, Java, Python, Golang, Php, Restful API`,
-			`Databases : SQL Server, Oracle Database, MySQL, Firebase, SQLite`,
-			`Tools : Git, GitHub, Sourcetree, Ai, Docker, Postman, RDLC Reports, Crystal Reports, Power Bi`],
+        `Backend : TypeScript, Node.js, C#.Net, VB.Net, C, C++, JavaScript, Java, Python, Golang, Php, Restful API`,
+        `Databases : SQL Server, Oracle Database, MySQL, Firebase, SQLite`,
+        `Tools : Git, GitHub, Sourcetree, Ai, Docker, Postman, RDLC Reports, Crystal Reports, Power Bi`],
 };
 
 export const experiences: Experience[] = [
@@ -43,7 +43,7 @@ export const experiences: Experience[] = [
         • Optimized backend APIs and SQL queries, significantly enhancing system response time and reliability.
         • Implemented security best practices for hardware - software integration and system stability. 
         `,
-        skills: ["C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman"],
+        skills: ["C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman", "Crystal Reports"],
         location: "Bangkok, Thailand",
         type: "Full-time",
     },
@@ -69,7 +69,7 @@ export const experiences: Experience[] = [
         • Created data visualization and reporting modules for analytical validation and operational efficiency.
         • Translated complex laboratory workflows into scalable software architecture through cross - functional collaboration.
         `,
-        skills: ["C#.net", "JavaScript", "bootstrap"],
+        skills: ["C#.net", "JavaScript", "bootstrap", "RDLC Reports", "Oracle Database"],
         location: "Bangkok, Thailand",
         type: "Full-time",
     },
@@ -88,26 +88,16 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
-//   {
-//     id: "1",
-//     name: "CloudMetrics Dashboard",
-//     description: "Real-time infrastructure monitoring platform with 50+ integrations and custom alerting rules.",
-//     tech: ["Go", "React", "InfluxDB", "Grafana", "WebSocket"],
-//     github: "https://github.com/yourname/cloudmetrics",
-//   },
-//   {
-//     id: "2",
-//     name: "OrderFlow API",
-//     description: "High-throughput order processing system handling 100K+ transactions per day with 99.9% uptime.",
-//     tech: ["Go", "gRPC", "PostgreSQL", "Redis", "Kafka"],
-//     github: "https://github.com/yourname/orderflow",
-//   },
-//   {
-//     id: "3",
-//     name: "DevPortal",
-//     description: "Developer portal with API documentation, sandbox environment, and usage analytics.",
-//     tech: ["React", "typeScript", "Next.js", "Prisma", "Stripe"],
-//     url: "https://devportal.example.com",
-//     github: "https://github.com/yourname/devportal",
-//   },
+    {
+        id: "1",
+        name: "S-LORD (Laboratory Management System)",
+        description: "Report",
+        tech: ["C#.net", "JavaScript", "bootstrap", "RDLC Report", "Oracle Database"],
+        url: "https://drive.google.com/drive/folders/1doHkW8qxNa_C4icTes-RwGzEO561VKQf?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
+        github: "https://github.com/nuttapatwork",
+        images: ["https://lh3.googleusercontent.com/d/1W4DoUiKhfd3NR0jm3763GsX0VBSZUAVe",
+            "https://lh3.googleusercontent.com/d/1eF9I7vKsEHuR_GEHIjAr6V3yhGxpTuwa",
+            "https://lh3.googleusercontent.com/d/1idznLRKLg5PukHm4f2AlLwxBcYcvNq4b"
+        ], // URL ลิงก์รูปภาพ
+    },
 ];

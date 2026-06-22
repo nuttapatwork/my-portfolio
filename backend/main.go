@@ -27,7 +27,7 @@ type Project struct {
 	Tech        []string `json:"tech"`
 	URL         string   `json:"url,omitempty"`
 	GitHub      string   `json:"github,omitempty"`
-	Image       string   `json:"image,omitempty"`
+	Images       []string `json:"image,omitempty"`
 }
 
 type Profile struct {
@@ -89,7 +89,7 @@ func experienceHandler(w http.ResponseWriter, r *http.Request) {
 			• Developed automated vehicle authentication using LPR, RFID, and IoT integration in production environments. 
 			• Optimized backend APIs and SQL queries, significantly enhancing system response time and reliability. Implemented security best practices for hardware-software integration and system stability. 
 			`,
-			Skills:   []string{"C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman"},
+			Skills:   []string{"C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman", "Crystal Reports"},
 			Location: "Bangkok, Thailand",
 			Type:     "Full-time",
 		},
@@ -115,7 +115,7 @@ func experienceHandler(w http.ResponseWriter, r *http.Request) {
 			• Created data visualization and reporting modules for analytical validation and operational efficiency. 
 			• Translated complex laboratory workflows into scalable software architecture through cross-functional collaboration.
 			`,
-			Skills:   []string{"C#.net", "JavaScript", "bootstrap"},
+			Skills:   []string{"C#.net", "JavaScript", "bootstrap", "RDLC Report", "Oracle Database"},
 			Location: "Bangkok, Thailand",
 			Type:     "Full-time",
 		},
@@ -136,7 +136,20 @@ func experienceHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func projectsHandler(w http.ResponseWriter, r *http.Request) {
-	projects := []Project{}
+	projects := []Project{
+		{
+			ID:          "1",
+			Name:        "S-LORD (Laboratory Management System)",
+			Description: "Report",
+			Tech:        []string{"C#.net", "JavaScript", "bootstrap", "RDLC Report", "Oracle Database"},
+			URL:         "https://drive.google.com/drive/folders/1doHkW8qxNa_C4icTes-RwGzEO561VKQf?usp=sharing",
+			GitHub:      "https://github.com/nuttapatwork",
+			Images: []string{
+				"https://lh3.googleusercontent.com/d/1W4DoUiKhfd3NR0jm3763GsX0VBSZUAVe",
+				"https://lh3.googleusercontent.com/d/1eF9I7vKsEHuR_GEHIjAr6V3yhGxpTuwa",
+				"https://lh3.googleusercontent.com/d/1idznLRKLg5PukHm4f2AlLwxBcYcvNq4b"},
+		},
+	}
 	jsonResponse(w, projects)
 }
 

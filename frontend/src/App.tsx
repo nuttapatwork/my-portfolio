@@ -10,9 +10,9 @@ import type { Profile, Experience as ExpType, Project } from "./types";
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 
 export default function App() {
-  const [profile, setProfile] = useState<Profile>(staticProfile);
-  const [experiences, setExperiences] = useState<ExpType[]>(staticExp);
-  const [projects, setProjects] = useState<Project[]>(staticProj);
+  const [profile, setProfile] = useState<Profile|null>(/* null */staticProfile);
+  const [experiences, setExperiences] = useState<ExpType[]>(/* [] */staticExp);
+  const [projects, setProjects] = useState<Project[]>(/* [] */ staticProj);
 
   useEffect(() => {
     if (!API_URL) return;

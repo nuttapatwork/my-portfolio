@@ -469,3 +469,45 @@ a { color: inherit; text-decoration: none; }
   z-index: 1; /* อยู่ล่างสุด */
   pointer-events: none; /* ✨ ป้องกันพื้นหลังบล็อกการคลิก */
 }
+/* สไตล์สำหรับกล่องรวมรูปภาพในโปรเจกต์การ์ด */
+.project-card__gallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto; /* เปิดให้สไลด์แนวนอนได้หากมีหลายรูป */
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin; /* สำหรับ Firefox */
+}
+
+/* ตกแต่งแถบ Scrollbar สำหรับ Chrome/Safari */
+.project-card__gallery::-webkit-scrollbar {
+  height: 6px;
+}
+.project-card__gallery::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* กล่องครอบรูปแต่ละรูป */
+.project-card__img-wrapper {
+  flex: 0 0 100%; /* แสดงทีละรูปเต็มความกว้างของการ์ด หรือปรับเป็น 80% ก็ได้ครับ */
+  scroll-snap-align: start;
+  aspect-ratio: 16 / 9; /* ล็อกสัดส่วนรูปภาพให้เท่ากัน */
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ตัวรูปภาพจริง */
+.project-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* บีบรูปให้เต็มพื้นที่อย่างสวยงาม */
+  transition: transform 0.3s ease;
+}
+
+.project-card__img:hover {
+  transform: scale(1.03); /* ลูกเล่นขยายรูปเล็กน้อยเวลาเอาเมาส์ไปชี้ */
+}

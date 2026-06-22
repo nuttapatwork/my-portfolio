@@ -29,6 +29,24 @@ export default function Projects({ projects }: { projects: Project[] }) {
               className="project-card fade-up"
               ref={el => { if (el) itemsRef.current[i] = el; }}
             >
+              {p.images && p.images.length > 0 && (
+                <div className="project-card__gallery">
+                  {p.images.map((imgUrl, imgIndex) => (
+                    <div key={imgIndex} className="project-card__img-wrapper">
+                      <img
+                        src={imgUrl}
+                        alt={`${p.name} screenshot ${imgIndex + 1}`}
+                        className="project-card__img"
+                        loading="lazy"
+                        onError={(e) => {
+                          // หากรูปโหลดไม่สำเร็จ ให้แสดงเป็นกล่องสีเทาแทนรูปพัง
+                          (e.target as HTMLImageElement).style.opacity = "0.3";
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
               <div className="project-card__number">0{i + 1}</div>
               <h3 className="project-card__name">{p.name}</h3>
               <p className="project-card__desc">{p.description}</p>
