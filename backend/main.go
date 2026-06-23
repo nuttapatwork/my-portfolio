@@ -59,7 +59,7 @@ func profileHandler(w http.ResponseWriter, r *http.Request) {
 		Phone:    "0897724270",
 		LinkedIn: "https://www.linkedin.com/in/nuttapat-tanatummathat-22b2ab320/",
 		Github:   "https://Github.com/nuttapatwork",
-		Location: "Pathumthani, Thailand (server)",
+		Location: "Pathumthani, Thailand",
 		CvURL:    "https://github.com/nuttapatwork/my-portfolio/blob/main/frontend/cv/Nuttapat Tanatummathat_ENG_CV_Fullstack.pdf",
 		Skills: []string{`Frontend : React, Vue, Css, Angular, Laravel, Bootstrap`,
 			`Backend : TypeScript, Node.js, C#.Net, VB.Net, C, C++, JavaScript, Java, Python, Golang, Php, Restful API`,

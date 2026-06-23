@@ -4,47 +4,84 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Nav from "./components/Nav";
+import ApiStatus from "./components/ApiStatus";
 import { profile as staticProfile, experiences as staticExp, projects as staticProj } from "./data";
 import type { Profile, Experience as ExpType, Project } from "./types";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+type DataSource = "checking" | "api" | "static";
 
 export default function App() {
   const [profile, setProfile] = useState<Profile | null>( staticProfile );
   const [experiences, setExperiences] = useState<ExpType[]>(staticExp);
   const [projects, setProjects] = useState<Project[]>(staticProj);
+  const [dataSource, setDataSource] = useState<DataSource>("checking");
 
   useEffect(() => {
-    if (!API_URL) return;
+    // if (!API_URL) return;
 
-    // 🛡️ สร้างฟังก์ชัน Helper เพื่อคัดกรองข้อมูลอย่างปลอดภัย
-    const fetchData = async (endpoint: string, setter: (data: any) => void) => {
+    // // 🛡️ สร้างฟังก์ชัน Helper เพื่อคัดกรองข้อมูลอย่างปลอดภัย
+    // const fetchData = async (endpoint: string, setter: (data: any) => void) => {
+    //   try {
+    //     const response = await fetch(`${API_URL}${endpoint}`);
+
+    //     // 1. ดักจับกรณี Server ล่ม (500, 502, 404)
+    //     if (!response.ok) {
+    //       throw new Error(`Server error with status: ${response.status}`);
+    //     }
+
+    //     const data = await response.json();
+    //     setter(data); // อัปเดตข้อมูลเมื่อมั่นใจว่าก้อนข้อมูลถูกต้อง
+    //   } catch (error) {
+    //     // 2. ถ้าล่ม ไม่ว่าจากเน็ตหลุด หรือ Server ยิง 500 จะตกมาที่นี่ทั้งหมด
+    //     // ไม่ต้องสั่ง setter() ใดๆ เพื่อปล่อยให้ตัวแปรยึดค่า staticData ชุดเดิมที่เซ็ตไว้ตั้งแต่แรก
+    //     console.error(`Failed to fetch ${endpoint}:`, error);
+    //   }
+    // };
+
+    // // เรียกใช้งานแบบขนาน
+    // fetchData("/api/profile", setProfile);
+    // fetchData("/api/experiences", setExperiences);
+    // fetchData("/api/projects", setProjects);
+     const checkAndFetch = async () => {
       try {
-        const response = await fetch(`${API_URL}${endpoint}`);
+        // 1. เช็คสถานะ backend ก่อนผ่าน /health
+        const health = await fetch(`${API_URL}/health`, { signal: AbortSignal.timeout(5000) });
+        if (!health.ok) throw new Error("health check failed");
 
-        // 1. ดักจับกรณี Server ล่ม (500, 502, 404)
-        if (!response.ok) {
-          throw new Error(`Server error with status: ${response.status}`);
-        }
+        // 2. Backend ตอบสนอง → ดึงข้อมูลจริง
+        const [profileRes, expRes, projRes] = await Promise.all([
+          fetch(`${API_URL}/api/profile`),
+          fetch(`${API_URL}/api/experiences`),
+          fetch(`${API_URL}/api/projects`),
+        ]);
 
-        const data = await response.json();
-        setter(data); // อัปเดตข้อมูลเมื่อมั่นใจว่าก้อนข้อมูลถูกต้อง
-      } catch (error) {
-        // 2. ถ้าล่ม ไม่ว่าจากเน็ตหลุด หรือ Server ยิง 500 จะตกมาที่นี่ทั้งหมด
-        // ไม่ต้องสั่ง setter() ใดๆ เพื่อปล่อยให้ตัวแปรยึดค่า staticData ชุดเดิมที่เซ็ตไว้ตั้งแต่แรก
-        console.error(`Failed to fetch ${endpoint}:`, error);
+        if (!profileRes.ok || !expRes.ok || !projRes.ok) throw new Error("data fetch failed");
+
+        const [profileData, expData, projData] = await Promise.all([
+          profileRes.json(),
+          expRes.json(),
+          projRes.json(),
+        ]);
+
+        setProfile(profileData);
+        setExperiences(expData);
+        setProjects(projData);
+        setDataSource("api");
+
+      } catch {
+        // Backend ไม่ตอบสนอง → ใช้ static data ใน data.ts แทน
+        setDataSource("static");
       }
     };
 
-    // เรียกใช้งานแบบขนาน
-    fetchData("/api/profile", setProfile);
-    fetchData("/api/experiences", setExperiences);
-    fetchData("/api/projects", setProjects);
+    checkAndFetch();
   }, []);
 
   return (
     <div className="app">
       <Nav name={profile?.name} />
+      <ApiStatus source={dataSource} apiUrl={API_URL} />
       <Hero profile={profile} />
       <Experience experiences={experiences} />
       <Projects projects={projects} />
