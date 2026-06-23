@@ -96,9 +96,9 @@ export const projects: Project[] = [
         tech: ["C#.net", "JavaScript", "bootstrap", "RDLC Report", "Oracle Database"],
         url: "https://drive.google.com/drive/folders/1doHkW8qxNa_C4icTes-RwGzEO561VKQf?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
         github: "https://github.com/nuttapatwork",
-        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/Screenshot%202026-06-23%20004232.png?raw=true",
-            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/Screenshot%202026-06-23%20004314.png?raw=true",
-            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/WorksheetSugar5516794.pdf.png?raw=true",
+        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/Screenshot%202026-06-23%20004232.png",
+            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/Screenshot%202026-06-23%20004314.png",
+            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/WorksheetSugar5516794.pdf.png",
         ], // URL ลิงก์รูปภาพ
     },
     {
@@ -108,9 +108,9 @@ export const projects: Project[] = [
         tech: ["C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman", "Crystal Reports"],
         url: "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
         github: "https://github.com/nuttapatwork",
-        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/IMG_5702.jpg?raw=true",
-            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/IMG_5704.jpg?raw=true",
-            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202024-10-08%20164532.png?raw=true",
+        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/IMG_5702.jpg",
+            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/IMG_5704.jpg",
+            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202024-10-08%20164532.png",
         ], // URL ลิงก์รูปภาพ
     },
     {
@@ -120,7 +120,7 @@ export const projects: Project[] = [
         tech: ["C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman", "Crystal Reports"],
         url: "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
         github: "https://github.com/nuttapatwork",
-        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/IngredionKalasin_SoilWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-04-23%20101258.png?raw=true",
+        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/IngredionKalasin_SoilWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-04-23%20101258.png",
         ], // URL ลิงก์รูปภาพ
     },
     {
@@ -130,8 +130,8 @@ export const projects: Project[] = [
         tech: ["C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman", "Crystal Reports"],
         url: "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
         github: "https://github.com/nuttapatwork",
-        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/scgp-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-03-24%20172318.png?raw=true",
-            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/scgp-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20messageImage_1727167661793.jpg?raw=true",
+        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/scgp-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-03-24%20172318.png",
+            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/scgp-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20messageImage_1727167661793.jpg",
         ], // URL ลิงก์รูปภาพ
     },
     {
@@ -141,8 +141,8 @@ export const projects: Project[] = [
         tech: ["C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman", "Crystal Reports"],
         url: "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
         github: "https://github.com/nuttapatwork",
-        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/TruckWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-03-21%20144304.png?raw=true",
-            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/TruckWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-04-25%20085605.png?raw=true",
+        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/TruckWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-03-21%20144304.png",
+            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/TruckWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-04-25%20085605.png",
         ], // URL ลิงก์รูปภาพ
     },
     {
@@ -152,8 +152,8 @@ export const projects: Project[] = [
         tech: ["C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman", "Crystal Reports"],
         url: "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
         github: "https://github.com/nuttapatwork",
-        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/WeightInd2-img/IMG_5751.jpg?raw=true",
-            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/WeightInd2-img/IMG_7630.jpg?raw=true",
+        images: ["https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/WeightInd2-img/IMG_5751.jpg",
+            "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/WeightInd2-img/IMG_7630.jpg",
         ], // URL ลิงก์รูปภาพ
     },
 ];
