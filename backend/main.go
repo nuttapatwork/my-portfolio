@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+
 	"github.com/rs/cors"
 )
 
@@ -59,7 +60,7 @@ func profileHandler(w http.ResponseWriter, r *http.Request) {
 		LinkedIn: "https://www.linkedin.com/in/nuttapat-tanatummathat-22b2ab320/",
 		Github:   "https://Github.com/nuttapatwork",
 		Location: "Pathumthani, Thailand",
-		CvURL:    "https://github.com/nuttapatwork/my-portfolio/blob/main/frontend/cv/Nuttapat Tanatummathat_ENG_CV_Fullstack.pdf",
+		CvURL:    "https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/cv/Nuttapat Tanatummathat_ENG_CV_Fullstack.pdf",
 		Skills: []string{`Frontend : React, Vue, Css, Angular, Laravel, Bootstrap`,
 			`Backend : TypeScript, Node.js, C#.Net, VB.Net, C, C++, JavaScript, Java, Python, Golang, Php, Restful API`,
 			`Databases : SQL Server, Oracle Database, MySQL, Firebase, SQLite`,
@@ -146,9 +147,9 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 			URL:         "https://drive.google.com/drive/folders/1doHkW8qxNa_C4icTes-RwGzEO561VKQf?usp=sharing",
 			Github:      "https://Github.com/nuttapatwork",
 			Images: []string{
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/s-lord-img/Screenshot%202026-06-23%20004232.png?raw=true",
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/s-lord-img/Screenshot%202026-06-23%20004314.png?raw=true",
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/s-lord-img/WorksheetSugar5516794.pdf.png?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/Screenshot%202026-06-23%20004232.png?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/Screenshot%202026-06-23%20004314.png?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/s-lord-img/WorksheetSugar5516794.pdf.png?raw=true",
 			},
 		},
 		{
@@ -159,9 +160,9 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 			URL:         "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
 			Github:      "https://Github.com/nuttapatwork",
 			Images: []string{
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/GuardianIndustryRayong-img/IMG_5702.jpg?raw=true",
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/GuardianIndustryRayong-img/IMG_5704.jpg?raw=true",
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/GuardianIndustryRayong-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202024-10-08%20164532.png?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/IMG_5702.jpg?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/IMG_5704.jpg?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/GuardianIndustryRayong-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202024-10-08%20164532.png?raw=true",
 			}, // URL ลิงก์รูปภาพ
 		},
 		{
@@ -171,7 +172,7 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 			Tech:        []string{"C#.Net", "Node.js", "VB.Net", "Python", "SQLSERVER", "MySQL", "SQLite", "Postman", "Crystal Reports"},
 			URL:         "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
 			Github:      "https://Github.com/nuttapatwork",
-			Images:      []string{"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/IngredionKalasin_SoilWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-04-23%20101258.png?raw=true"}, // URL ลิงก์รูปภาพ
+			Images:      []string{"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/IngredionKalasin_SoilWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-04-23%20101258.png?raw=true"}, // URL ลิงก์รูปภาพ
 		},
 		{
 			ID:          "4",
@@ -181,8 +182,8 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 			URL:         "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
 			Github:      "https://Github.com/nuttapatwork",
 			Images: []string{
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/scgp-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-03-24%20172318.png?raw=true",
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/scgp-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20messageImage_1727167661793.jpg?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/scgp-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-03-24%20172318.png?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/scgp-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20messageImage_1727167661793.jpg?raw=true",
 			}, // URL ลิงก์รูปภาพ
 		},
 		{
@@ -193,8 +194,8 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 			URL:         "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
 			Github:      "https://Github.com/nuttapatwork",
 			Images: []string{
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/TruckWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-03-21%20144304.png?raw=true",
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/TruckWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-04-25%20085605.png?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/TruckWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-03-21%20144304.png?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/TruckWeight-img/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%20Screenshot%202025-04-25%20085605.png?raw=true",
 			}, // URL ลิงก์รูปภาพ
 		},
 		{
@@ -205,8 +206,8 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 			URL:         "https://drive.google.com/drive/folders/1EnsjDKNJNHorIsXQXZdI7w29PPBfuRwq?usp=sharing", // ใส่ลิงก์หน้าเว็บโปรเจกต์จริง (ถ้ามี ถ้าไม่มีปล่อยว่างไว้ ระบบจะซ่อนอัตโนมัติ)
 			Github:      "https://Github.com/nuttapatwork",
 			Images: []string{
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/WeightInd2-img/IMG_5751.jpg?raw=true",
-				"https://Github.com/nuttapatwork/my-portfolio/blob/main/frontend/projects/Theo/WeightInd2-img/IMG_7630.jpg?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/WeightInd2-img/IMG_5751.jpg?raw=true",
+				"https://raw.githubusercontent.com/nuttapatwork/my-portfolio/main/frontend/projects/Theo/WeightInd2-img/IMG_7630.jpg?raw=true",
 			}, // URL ลิงก์รูปภาพ
 		},
 	}
