@@ -13,6 +13,7 @@ export const profile: Profile = {
     phone: "0897724270",
     linkedin: "https://www.linkedin.com/in/nuttapat-tanatummathat-22b2ab320/",
     github: "https://github.com/nuttapatwork",
+    cvUrl: "https://github.com/nuttapatwork/my-portfolio/blob/main/frontend/cv/Nuttapat Tanatummathat_ENG_CV_Fullstack.pdf",
     location: "Pathumthani, Thailand (Static)",
     skills: [`Frontend : React, Vue, Css, Angular, Laravel, Bootstrap`,
         `Backend : TypeScript, Node.js, C#.Net, VB.Net, C, C++, JavaScript, Java, Python, Golang, Php, Restful API`,

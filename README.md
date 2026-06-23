@@ -70,6 +70,10 @@ npm install
 
 # รัน dev server (port 5173)
 npm run dev
+# Build project
+npm run build
+# Deploy project
+npm run deploy
 ```
 
 เปิดเบราว์เซอร์: **http://localhost:5173**

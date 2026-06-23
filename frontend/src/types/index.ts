@@ -5,10 +5,11 @@ export interface Profile {
   email: string;
   phone: string;
   linkedin: string;
-  github: string;
+  github?: string;
   location: string;
   skills: string[];
   image?: string;
+  cvUrl?: string;
 }
 
 export interface Experience {

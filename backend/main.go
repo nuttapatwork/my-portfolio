@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+
 	"github.com/rs/cors"
 )
 
@@ -40,6 +41,7 @@ type Profile struct {
 	Github   string   `json:"github"`
 	Location string   `json:"location"`
 	Skills   []string `json:"skills"`
+	CvURL    string   `json:"cvUrl,omitempty"`
 }
 
 func jsonResponse(w http.ResponseWriter, data interface{}) {
@@ -58,6 +60,7 @@ func profileHandler(w http.ResponseWriter, r *http.Request) {
 		LinkedIn: "https://www.linkedin.com/in/nuttapat-tanatummathat-22b2ab320/",
 		Github:   "https://Github.com/nuttapatwork",
 		Location: "Pathumthani, Thailand (server)",
+		CvURL:    "https://github.com/nuttapatwork/my-portfolio/blob/main/frontend/cv/Nuttapat Tanatummathat_ENG_CV_Fullstack.pdf",
 		Skills: []string{`Frontend : React, Vue, Css, Angular, Laravel, Bootstrap`,
 			`Backend : TypeScript, Node.js, C#.Net, VB.Net, C, C++, JavaScript, Java, Python, Golang, Php, Restful API`,
 			`Databases : SQL Server, Oracle Database, MySQL, Firebase, SQLite`,

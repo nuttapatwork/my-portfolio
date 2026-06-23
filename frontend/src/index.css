@@ -181,6 +181,36 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold);
   transform: translateY(-1px);
 }
+.btn--cv {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn--cv:hover {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+}
+.btn--cv svg {
+  transition: transform var(--transition);
+}
+.btn--cv:hover svg {
+  transform: translateY(2px);
+}
+.btn--cv--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn--cv--disabled:hover {
+  background: transparent;
+  color: var(--gold);
+  transform: none;
+  box-shadow: none;
+}
 
 /* ── Skill Tags ── */
 .skill-tag {
@@ -679,4 +709,9 @@ a { color: inherit; text-decoration: none; }
   font-family: monospace;
   pointer-events: none;
   z-index: 10;
+}
+@media (max-width: 768px) {
+  .hero__container { flex-direction: column-reverse; padding: 7rem 1.5rem 3rem; gap: 2rem; }
+  .hero__image-wrapper { width: 180px; height: 180px; }
+  .hero__cta { flex-wrap: wrap; }
 }
