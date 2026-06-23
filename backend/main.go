@@ -5,7 +5,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-
 	"github.com/rs/cors"
 )
 
@@ -14,7 +13,7 @@ type Experience struct {
 	Company     string   `json:"company"`
 	Role        string   `json:"role"`
 	Period      string   `json:"period"`
-	Description string   `json:"Description"`
+	Description string   `json:"description"`
 	Skills      []string `json:"skills"`
 	Location    string   `json:"location"`
 	Type        string   `json:"type"`
@@ -22,23 +21,23 @@ type Experience struct {
 
 type Project struct {
 	ID          string   `json:"id"`
-	Name        string   `json:"Name"`
-	Description string   `json:"Description"`
-	Tech        []string `json:"Tech"`
-	URL         string   `json:"URL,omitempty"`
-	Github      string   `json:"Github,omitempty"`
+	Name        string   `json:"name"`
+	Description string   `json:"description"`
+	Tech        []string `json:"tech"`
+	URL         string   `json:"url,omitempty"`
+	Github      string   `json:"github,omitempty"`
 	Images      []string `json:"image,omitempty"`
 }
 
 type Profile struct {
 	Image    string   `json:"image,omitempty"`
-	Name     string   `json:"Name"`
+	Name     string   `json:"name"`
 	Title    string   `json:"title"`
 	Bio      string   `json:"bio"`
 	Email    string   `json:"email"`
 	Phone    string   `json:"phone"`
 	LinkedIn string   `json:"linkedin"`
-	Github   string   `json:"Github"`
+	Github   string   `json:"github"`
 	Location string   `json:"location"`
 	Skills   []string `json:"skills"`
 }
@@ -58,7 +57,7 @@ func profileHandler(w http.ResponseWriter, r *http.Request) {
 		Phone:    "0897724270",
 		LinkedIn: "https://www.linkedin.com/in/nuttapat-tanatummathat-22b2ab320/",
 		Github:   "https://Github.com/nuttapatwork",
-		Location: "Pathumthani, Thailand",
+		Location: "Pathumthani, Thailand (server)",
 		Skills: []string{`Frontend : React, Vue, Css, Angular, Laravel, Bootstrap`,
 			`Backend : TypeScript, Node.js, C#.Net, VB.Net, C, C++, JavaScript, Java, Python, Golang, Php, Restful API`,
 			`Databases : SQL Server, Oracle Database, MySQL, Firebase, SQLite`,
