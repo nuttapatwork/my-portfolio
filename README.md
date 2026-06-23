@@ -194,6 +194,33 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 
 ---
 
+### ขั้นตอนการสั่งรันคำสั่ง Git
+# 1. เริ่มต้นระบบ Git สำหรับโปรเจกต์นี้ (ถ้าเคยสั่งไปแล้ว ข้ามขั้นตอนนี้ได้ครับ)
+git init
+
+# 2. ตรวจสอบสถานะไฟล์ (ออปชันเสริม: เพื่อดูว่ามีไฟล์อะไรกำลังจะขึ้นบ้าง)
+git status
+
+# 3. เลือกไฟล์ทั้งหมดในทุกโฟลเดอร์ย่อยเตรียมส่งขึ้นระบบ
+git add .
+
+# 4. บันทึกประวัติเวอร์ชัน พร้อมใส่ข้อความอธิบาย (เปลี่ยนข้อความในเครื่องหมายคำพูดได้)
+git commit -m ""
+
+# 5. ตั้งชื่อ Branch หลักของโปรเจกต์ให้เป็น "main" (มาตรฐานของ GitHub)
+git branch -M main
+
+# 6. ผูกโปรเจกต์ในเครื่องเข้ากับลิงก์ Repository บนเว็บ GitHub 
+# ⚠️ (อย่าลืมเปลี่ยน URL ด้านล่างนี้ให้เป็นลิงก์ที่คุณก๊อปปี้มาจากหน้าเว็บ GitHub ของคุณเอง)
+git remote add origin https://github.com/nuttapatwork/my-portfolio.git
+
+# 7. อัปโหลดโค้ดทั้งหมดในเครื่องขึ้นสู่ GitHub
+git push -u origin main
+
+# สร้าง Tag: สั่งสร้างป้ายชื่อเวอร์ช
+git tag -a v1.0.0 -m "Release เวอร์ชั่น 1.0.0"
+
+
 ## 📡 API Endpoints
 
 | Method | Endpoint | คำอธิบาย |
@@ -217,3 +244,4 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 ## 📞 สอบถามเพิ่มเติม
 
 หากติดปัญหาขั้นตอนไหน สามารถถามได้เลย!
+
