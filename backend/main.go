@@ -27,7 +27,7 @@ type Project struct {
 	Tech        []string `json:"tech"`
 	URL         string   `json:"url,omitempty"`
 	Github      string   `json:"github,omitempty"`
-	Images      []string `json:"image,omitempty"`
+	Images      []string `json:"images,omitempty"`
 }
 
 type Profile struct {
