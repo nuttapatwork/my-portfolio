@@ -135,7 +135,7 @@ function ProjectCardItem({
               transform: `translateX(-${currentImgIndex * 100}%)`
             }}
           >
-            {project.images.map((imgUrl, imgIndex) => (
+            {project.images?.map((imgUrl, imgIndex) => (
               <div 
                 key={imgIndex} 
                 className="project-card__img-slide"

@@ -10,7 +10,7 @@ import type { Profile, Experience as ExpType, Project } from "./types";
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 
 export default function App() {
-  const [profile, setProfile] = useState<Profile|null>(staticProfile);
+  const [profile, setProfile] = useState<Profile | null>( staticProfile );
   const [experiences, setExperiences] = useState<ExpType[]>(staticExp);
   const [projects, setProjects] = useState<Project[]>(staticProj);
 
@@ -21,12 +21,12 @@ export default function App() {
     const fetchData = async (endpoint: string, setter: (data: any) => void) => {
       try {
         const response = await fetch(`${API_URL}${endpoint}`);
-        
+
         // 1. ดักจับกรณี Server ล่ม (500, 502, 404)
         if (!response.ok) {
           throw new Error(`Server error with status: ${response.status}`);
         }
-        
+
         const data = await response.json();
         setter(data); // อัปเดตข้อมูลเมื่อมั่นใจว่าก้อนข้อมูลถูกต้อง
       } catch (error) {
