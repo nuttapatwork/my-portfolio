@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Nav from "./components/Nav";
 import ApiStatus from "./components/ApiStatus";
+import Donate from "./components/Donate";
 import { profile as staticProfile, experiences as staticExp, projects as staticProj } from "./data";
 import type { Profile, Experience as ExpType, Project } from "./types";
 
