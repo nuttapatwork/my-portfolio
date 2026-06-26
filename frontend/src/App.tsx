@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import Nav from "./components/Nav";
 import ApiStatus from "./components/ApiStatus";
 import Donate from "./components/Donate";
+import Affiliates from "./components/Affiliates";
 import { profile as staticProfile, experiences as staticExp, projects as staticProj } from "./data";
 import type { Profile, Experience as ExpType, Project } from "./types";
 
@@ -13,13 +14,13 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 type DataSource = "checking" | "api" | "static";
 
 export default function App() {
-  const [profile, setProfile] = useState<Profile | null>( staticProfile );
+  const [profile, setProfile] = useState<Profile | null>(staticProfile);
   const [experiences, setExperiences] = useState<ExpType[]>(staticExp);
   const [projects, setProjects] = useState<Project[]>(staticProj);
   const [dataSource, setDataSource] = useState<DataSource>("checking");
 
   useEffect(() => {
-     const checkAndFetch = async () => {
+    const checkAndFetch = async () => {
       try {
         // 1. เช็คสถานะ backend ก่อนผ่าน /health
         const health = await fetch(`${API_URL}/health`, { signal: AbortSignal.timeout(5000) });
@@ -61,6 +62,7 @@ export default function App() {
       <Hero profile={profile} />
       <Experience experiences={experiences} />
       <Projects projects={projects} />
+      <Affiliates />
       <Donate />
       <Contact profile={profile} />
     </div>
