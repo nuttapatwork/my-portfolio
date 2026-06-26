@@ -19,7 +19,7 @@ export default function Donate() {
           Buy Me a Coffee ☕
         </h2>
         <p className="donate__lead">
-          ถ้าผลงานของผมมีประโยชน์กับคุณ สนับสนุนได้เลยครับ ขอบคุณมากๆ 🙏
+          สนับสนุนได้เลยครับ ขอบคุณมากๆ 🙏
         </p>
 
         <div className="donate__cards">
@@ -46,24 +46,7 @@ export default function Donate() {
             <p className="donate__name">Nuttapat T.</p>
           </div>
 
-          {/* GitHub Sponsors (optional) */}
-          <div className="donate__card donate__card--alt">
-            <div className="donate__card-header">
-              <span className="donate__icon">⭐</span>
-              <h3>GitHub</h3>
-            </div>
-            <p className="donate__alt-desc">
-              Star โปรเจคของผมบน GitHub<br/>ช่วยให้คนอื่นเจอผลงานของผมได้ง่ายขึ้น
-            </p>
-            <a
-              href="https://github.com/nuttapatwork"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn--ghost donate__btn"
-            >
-              ⭐ Star on GitHub
-            </a>
-          </div>
+
         </div>
       </div>
     </section>

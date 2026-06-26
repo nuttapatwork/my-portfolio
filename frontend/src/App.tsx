@@ -61,6 +61,7 @@ export default function App() {
       <Hero profile={profile} />
       <Experience experiences={experiences} />
       <Projects projects={projects} />
+      <Donate />
       <Contact profile={profile} />
     </div>
   );

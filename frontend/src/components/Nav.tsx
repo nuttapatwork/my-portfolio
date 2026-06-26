@@ -13,7 +13,7 @@ export default function Nav({ name }: { name?: string }) {
     <nav className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
       <span className="nav__logo">{name?.split(" ")[0] ?? "Portfolio"}</span>
       <div className="nav__links">
-        {["Experience", "Projects", "Contact"].map(s => (
+        {["Experience", "Projects", "Contact","Donate"].map(s => (
           <a key={s} href={`#${s.toLowerCase()}`} className="nav__link">{s}</a>
         ))}
       </div>

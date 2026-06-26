@@ -1167,3 +1167,108 @@ a {
     right: 1rem;
   }
 }
+
+/* ── Donate Section ── */
+.section--donate {
+  background: var(--navy-2);
+  border-top: 1px solid var(--border);
+}
+.donate__lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.donate__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 640px) {
+  .donate__cards { grid-template-columns: 1fr; }
+}
+
+.donate__card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  transition: border-color var(--transition);
+}
+.donate__card:hover { border-color: rgba(201,168,76,0.3); }
+.donate__card--alt {
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.donate__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  align-self: flex-start;
+}
+.donate__card--alt .donate__card-header { align-self: center; }
+.donate__icon { font-size: 1.4rem; }
+.donate__card-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.donate__qr-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  display: inline-flex;
+}
+.donate__qr {
+  width: 180px;
+  height: 180px;
+  display: block;
+}
+
+.donate__number {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--navy-3, #141E35);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  width: 100%;
+  justify-content: space-between;
+}
+.donate__copy-btn {
+  background: var(--gold-dim);
+  border: 1px solid rgba(201,168,76,0.2);
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+.donate__copy-btn:hover { background: rgba(201,168,76,0.25); }
+
+.donate__name {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.donate__alt-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.donate__btn { width: 100%; justify-content: center; }
